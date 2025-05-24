@@ -1,0 +1,73 @@
+execve("/usr/bin/ping", ["ping", "-c", "1", "baidu.com"], 0x7ffce9f3de88 /* 26 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libidn2.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libunistring.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+socket(AF_INET, SOCK_DGRAM, IPPROTO_ICMP) = -1 EACCES (Permission denied)
+socket(AF_INET, SOCK_RAW, IPPROTO_ICMP) = 3
+socket(AF_INET6, SOCK_DGRAM, IPPROTO_ICMPV6) = -1 EACCES (Permission denied)
+socket(AF_INET6, SOCK_RAW, IPPROTO_ICMPV6) = 4
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 5
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+connect(5, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+connect(5, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=569, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 5
+newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=930, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2", O_RDONLY|O_CLOEXEC) = 5
+socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 5
+connect(5, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+sendmmsg(5, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\266L\1 \0\1\0\0\0\0\0\1\5baidu\3com\0\0\1\0\1\0\0)\4\260"..., iov_len=38}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=38}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\261e\1 \0\1\0\0\0\0\0\1\5baidu\3com\0\0\34\0\1\0\0)\4\260"..., iov_len=38}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=38}], 2, MSG_NOSIGNAL) = 2
+recvfrom(5, "\266L\201\200\0\1\0\2\0\0\0\1\5baidu\3com\0\0\1\0\1\300\f\0\1\0"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 70
+recvfrom(5, "\261e\201\200\0\1\0\0\0\1\0\1\5baidu\3com\0\0\34\0\1\300\f\0\6\0"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 81
+openat(AT_FDCWD, "/etc/gai.conf", O_RDONLY|O_CLOEXEC) = 5
+socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 5
+sendto(5, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1747968921, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1747968921, nlmsg_pid=9762}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=316, tstamp=316}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1747968921, nlmsg_pid=9762}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens33")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("172.16.222.255")], [{nla_len=10, nla_type=IFA_LABEL}, "ens33"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_NOPREFIXROUTE], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=1408, ifa_valid=1408, cstamp=873, tstamp=1710857}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1747968921, nlmsg_pid=9762}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=316, tstamp=316}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1747968921, nlmsg_pid=9762}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens33")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::b6b0:3285:3d34:9e9d")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=855, tstamp=855}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 144
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1747968921, nlmsg_pid=9762}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 5
+connect(5, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("39.156.66.10")}, 16) = 0
+connect(5, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(5, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("110.242.68.66")}, 16) = 0
+socket(AF_INET, SOCK_DGRAM, IPPROTO_IP) = 5
+connect(5, {sa_family=AF_INET, sin_port=htons(1025), sin_addr=inet_addr("39.156.66.10")}, 16) = 0
+write(1, "PING baidu.com (39.156.66.10) 56"..., 52) = 52
+sendto(3, "\10\0\205\363&\"\0\1\231\343/h\0\0\0\0\266\312\r\0\0\0\0\0\20\21\22\23\24\25\26\27"..., 64, 0, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("39.156.66.10")}, 16) = 64
+recvmsg(3, {msg_name={sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("39.156.66.10")}, msg_namelen=128 => 16, msg_iov=[{iov_base="E\0\0T\225%\0\0\200\1\261I'\234B\n\254\20\336\203\0\0\215\363&\"\0\1\231\343/h"..., iov_len=192}], msg_iovlen=1, msg_control=[{cmsg_len=32, cmsg_level=SOL_SOCKET, cmsg_type=SO_TIMESTAMP_OLD, cmsg_data={tv_sec=1747968921, tv_usec=908198}}], msg_controllen=32, msg_flags=0}, 0) = 84
+newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=930, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=569, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 5
+socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 5
+connect(5, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+sendto(5, "\214r\1 \0\1\0\0\0\0\0\1\00210\00266\003156\00239\7in-add"..., 54, MSG_NOSIGNAL, NULL, 0) = 54
+recvfrom(5, "\214r\201\203\0\1\0\0\0\0\0\1\00210\00266\003156\00239\7in-add"..., 1024, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 54
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_myhostname.so.2", O_RDONLY|O_CLOEXEC) = 5
+socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC|SOCK_NONBLOCK, NETLINK_ROUTE) = 5
+sendto(5, [{nlmsg_len=24, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_ACK|NLM_F_DUMP, nlmsg_seq=322260151, nlmsg_pid=0}, {ifa_family=AF_INET, ifa_prefixlen=0, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=0}], 24, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 128) = 24
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 164
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=322260151, nlmsg_pid=9762}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=316, tstamp=316}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=322260151, nlmsg_pid=9762}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens33")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("172.16.222.255")], [{nla_len=10, nla_type=IFA_LABEL}, "ens33"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_NOPREFIXROUTE], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=1408, ifa_valid=1408, cstamp=873, tstamp=1710857}]]]], iov_len=328}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 164
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 20
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=322260151, nlmsg_pid=9762}, 0], iov_len=328}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 20
+socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC|SOCK_NONBLOCK, NETLINK_ROUTE) = 5
+sendto(5, [{nlmsg_len=28, nlmsg_type=RTM_GETROUTE, nlmsg_flags=NLM_F_REQUEST|NLM_F_ACK|NLM_F_DUMP, nlmsg_seq=322286491, nlmsg_pid=0}, {rtm_family=AF_INET, rtm_dst_len=0, rtm_src_len=0, rtm_tos=0, rtm_table=RT_TABLE_MAIN, rtm_protocol=RTPROT_UNSPEC, rtm_scope=RT_SCOPE_UNIVERSE, rtm_type=RTN_UNICAST, rtm_flags=0}], 28, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 128) = 28
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 136
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[[{nlmsg_len=68, nlmsg_type=RTM_NEWROUTE, nlmsg_flags=NLM_F_MULTI|NLM_F_DUMP_FILTERED, nlmsg_seq=322286491, nlmsg_pid=9762}, {rtm_family=AF_INET, rtm_dst_len=0, rtm_src_len=0, rtm_tos=0, rtm_table=RT_TABLE_MAIN, rtm_protocol=RTPROT_DHCP, rtm_scope=RT_SCOPE_UNIVERSE, rtm_type=RTN_UNICAST, rtm_flags=0}, [[{nla_len=8, nla_type=RTA_TABLE}, RT_TABLE_MAIN], [{nla_len=8, nla_type=RTA_PRIORITY}, 100], [{nla_len=8, nla_type=RTA_PREFSRC}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=RTA_GATEWAY}, inet_addr("172.16.222.2")], [{nla_len=8, nla_type=RTA_OIF}, if_nametoindex("ens33")]]], [{nlmsg_len=68, nlmsg_type=RTM_NEWROUTE, nlmsg_flags=NLM_F_MULTI|NLM_F_DUMP_FILTERED, nlmsg_seq=322286491, nlmsg_pid=9762}, {rtm_family=AF_INET, rtm_dst_len=24, rtm_src_len=0, rtm_tos=0, rtm_table=RT_TABLE_MAIN, rtm_protocol=RTPROT_KERNEL, rtm_scope=RT_SCOPE_LINK, rtm_type=RTN_UNICAST, rtm_flags=0}, [[{nla_len=8, nla_type=RTA_TABLE}, RT_TABLE_MAIN], [{nla_len=8, nla_type=RTA_DST}, inet_addr("172.16.222.0")], [{nla_len=8, nla_type=RTA_PRIORITY}, 100], [{nla_len=8, nla_type=RTA_PREFSRC}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=RTA_OIF}, if_nametoindex("ens33")]]]], iov_len=280}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 136
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 20
+recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI|NLM_F_DUMP_FILTERED, nlmsg_seq=322286491, nlmsg_pid=9762}, 0], iov_len=280}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 20
+write(1, "64 bytes from 39.156.66.10: icmp"..., 60) = 60
+write(1, "\n", 1)                       = 1
+write(1, "--- baidu.com ping statistics --"..., 34) = 34
+write(1, "1 packets transmitted, 1 receive"..., 60) = 60
+write(1, "rtt min/avg/max/mdev = 4.336/4.3"..., 50) = 50
++++ exited with 0 +++

@@ -1,0 +1,38 @@
+10426 execve("/usr/bin/ping", ["ping", "-c", "1", "localhost"], 0x7ffcbc080260 /* 26 vars */) = 0
+10426 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+10426 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+10426 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+10426 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libidn2.so.0", O_RDONLY|O_CLOEXEC) = 3
+10426 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+10426 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libunistring.so.5", O_RDONLY|O_CLOEXEC) = 3
+10426 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+10426 socket(AF_INET, SOCK_DGRAM, IPPROTO_ICMP) = -1 EACCES (Permission denied)
+10426 socket(AF_INET, SOCK_RAW, IPPROTO_ICMP) = 3
+10426 socket(AF_INET6, SOCK_DGRAM, IPPROTO_ICMPV6) = -1 EACCES (Permission denied)
+10426 socket(AF_INET6, SOCK_RAW, IPPROTO_ICMPV6) = 4
+10426 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 5
+10426 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+10426 connect(5, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+10426 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+10426 connect(5, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+10426 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=569, ...}, 0) = 0
+10426 newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+10426 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 5
+10426 newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=930, ...}, 0) = 0
+10426 openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 5
+10426 openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 5
+10426 openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 5
+10426 socket(AF_INET, SOCK_DGRAM, IPPROTO_IP) = 5
+10426 connect(5, {sa_family=AF_INET, sin_port=htons(1025), sin_addr=inet_addr("127.0.0.1")}, 16) = 0
+10426 write(1, "PING localhost (127.0.0.1) 56(84"..., 49) = 49
+10426 sendto(3, "\10\0\377\373(\272\0\1\316\347/h\0\0\0\0\4&\16\0\0\0\0\0\20\21\22\23\24\25\26\27"..., 64, 0, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("127.0.0.1")}, 16) = 64
+10426 recvmsg(3, {msg_name={sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("127.0.0.1")}, msg_namelen=128 => 16, msg_iov=[{iov_base="E\0\0TW\236\0\0@\1%\t\177\0\0\1\177\0\0\1\0\0\7\374(\272\0\1\316\347/h"..., iov_len=192}], msg_iovlen=1, msg_control=[{cmsg_len=32, cmsg_level=SOL_SOCKET, cmsg_type=SO_TIMESTAMP_OLD, cmsg_data={tv_sec=1747969998, tv_usec=927577}}], msg_controllen=32, msg_flags=0}, 0) = 84
+10426 newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=930, ...}, 0) = 0
+10426 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=569, ...}, 0) = 0
+10426 openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 5
+10426 write(1, "64 bytes from localhost (127.0.0"..., 69) = 69
+10426 write(1, "\n", 1)                 = 1
+10426 write(1, "--- localhost ping statistics --"..., 34) = 34
+10426 write(1, "1 packets transmitted, 1 receive"..., 60) = 60
+10426 write(1, "rtt min/avg/max/mdev = 0.341/0.3"..., 50) = 50
+10426 +++ exited with 0 +++

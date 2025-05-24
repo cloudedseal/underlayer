@@ -1,0 +1,66 @@
+12618 execve("/usr/bin/ping", ["ping", "-c", "1", "yangs-MacBook-Pro.local"], 0x7ffd418110e0 /* 26 vars */) = 0
+12618 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+12618 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+12618 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+12618 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libidn2.so.0", O_RDONLY|O_CLOEXEC) = 3
+12618 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+12618 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libunistring.so.5", O_RDONLY|O_CLOEXEC) = 3
+12618 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+12618 socket(AF_INET, SOCK_DGRAM, IPPROTO_ICMP) = -1 EACCES (Permission denied)
+12618 socket(AF_INET, SOCK_RAW, IPPROTO_ICMP) = 3
+12618 socket(AF_INET6, SOCK_DGRAM, IPPROTO_ICMPV6) = -1 EACCES (Permission denied)
+12618 socket(AF_INET6, SOCK_RAW, IPPROTO_ICMPV6) = 4
+12618 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 5
+12618 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+12618 connect(5, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+12618 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+12618 connect(5, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+12618 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=569, ...}, 0) = 0
+12618 newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+12618 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 5
+12618 newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=930, ...}, 0) = 0
+12618 openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 5
+12618 openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 5
+12618 openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 5
+12618 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+12618 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2", O_RDONLY|O_CLOEXEC) = 5
+12618 newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=930, ...}, 0) = 0
+12618 socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 5
+12618 connect(5, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+12618 sendto(5, "\230\354\1 \0\1\0\0\0\0\0\1\5local\0\0\6\0\1\0\0)\4\260\0\0\0\0"..., 34, MSG_NOSIGNAL, NULL, 0) = 34
+12618 recvfrom(5, "\230\354\201\203\0\1\0\0\0\1\0\1\5local\0\0\6\0\1\0\0\6\0\1\0\0\0\5"..., 65535, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 109
+12618 socket(AF_UNIX, SOCK_STREAM, 0)   = 5
+12618 connect(5, {sa_family=AF_UNIX, sun_path="/run/avahi-daemon/socket"}, 110) = 0
+12618 write(5, "RESOLVE-HOSTNAME-IPV4 yangs-MacB"..., 46) = 46
+12618 socket(AF_INET, SOCK_DGRAM, IPPROTO_IP) = 5
+12618 connect(5, {sa_family=AF_INET, sin_port=htons(1025), sin_addr=inet_addr("172.16.222.1")}, 16) = 0
+12618 write(1, "PING yangs-MacBook-Pro.local (17"..., 66) = 66
+12618 sendto(3, "\10\0Q\2541J\0\1\220\355/h\0\0\0\0\355\337\10\0\0\0\0\0\20\21\22\23\24\25\26\27"..., 64, 0, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("172.16.222.1")}, 16) = 64
+12618 recvmsg(3, {msg_name={sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("172.16.222.1")}, msg_namelen=128 => 16, msg_iov=[{iov_base="E\0\0T\0\0@\0@\1&\3\254\20\336\1\254\20\336\203\0\0Y\2541J\0\1\220\355/h"..., iov_len=192}], msg_iovlen=1, msg_control=[{cmsg_len=32, cmsg_level=SOL_SOCKET, cmsg_type=SO_TIMESTAMP_OLD, cmsg_data={tv_sec=1747971472, tv_usec=583878}}], msg_controllen=32, msg_flags=0}, 0) = 84
+12618 newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=930, ...}, 0) = 0
+12618 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=569, ...}, 0) = 0
+12618 openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 5
+12618 socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 5
+12618 connect(5, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+12618 sendto(5, "\177I\1 \0\1\0\0\0\0\0\1\0011\003222\00216\003172\7in-add"..., 54, MSG_NOSIGNAL, NULL, 0) = 54
+12618 recvfrom(5, "\177I\201\203\0\1\0\0\0\0\0\1\0011\003222\00216\003172\7in-add"..., 1024, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 54
+12618 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+12618 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_myhostname.so.2", O_RDONLY|O_CLOEXEC) = 5
+12618 socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC|SOCK_NONBLOCK, NETLINK_ROUTE) = 5
+12618 sendto(5, [{nlmsg_len=24, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_ACK|NLM_F_DUMP, nlmsg_seq=2872925566, nlmsg_pid=0}, {ifa_family=AF_INET, ifa_prefixlen=0, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=0}], 24, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 128) = 24
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 164
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=2872925566, nlmsg_pid=12618}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=316, tstamp=316}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=2872925566, nlmsg_pid=12618}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens33")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("172.16.222.255")], [{nla_len=10, nla_type=IFA_LABEL}, "ens33"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_NOPREFIXROUTE], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=1557, ifa_valid=1557, cstamp=873, tstamp=1980857}]]]], iov_len=328}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 164
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 20
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=2872925566, nlmsg_pid=12618}, 0], iov_len=328}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 20
+12618 socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC|SOCK_NONBLOCK, NETLINK_ROUTE) = 5
+12618 sendto(5, [{nlmsg_len=28, nlmsg_type=RTM_GETROUTE, nlmsg_flags=NLM_F_REQUEST|NLM_F_ACK|NLM_F_DUMP, nlmsg_seq=2872974679, nlmsg_pid=0}, {rtm_family=AF_INET, rtm_dst_len=0, rtm_src_len=0, rtm_tos=0, rtm_table=RT_TABLE_MAIN, rtm_protocol=RTPROT_UNSPEC, rtm_scope=RT_SCOPE_UNIVERSE, rtm_type=RTN_UNICAST, rtm_flags=0}], 28, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 128) = 28
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 136
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[[{nlmsg_len=68, nlmsg_type=RTM_NEWROUTE, nlmsg_flags=NLM_F_MULTI|NLM_F_DUMP_FILTERED, nlmsg_seq=2872974679, nlmsg_pid=12618}, {rtm_family=AF_INET, rtm_dst_len=0, rtm_src_len=0, rtm_tos=0, rtm_table=RT_TABLE_MAIN, rtm_protocol=RTPROT_DHCP, rtm_scope=RT_SCOPE_UNIVERSE, rtm_type=RTN_UNICAST, rtm_flags=0}, [[{nla_len=8, nla_type=RTA_TABLE}, RT_TABLE_MAIN], [{nla_len=8, nla_type=RTA_PRIORITY}, 100], [{nla_len=8, nla_type=RTA_PREFSRC}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=RTA_GATEWAY}, inet_addr("172.16.222.2")], [{nla_len=8, nla_type=RTA_OIF}, if_nametoindex("ens33")]]], [{nlmsg_len=68, nlmsg_type=RTM_NEWROUTE, nlmsg_flags=NLM_F_MULTI|NLM_F_DUMP_FILTERED, nlmsg_seq=2872974679, nlmsg_pid=12618}, {rtm_family=AF_INET, rtm_dst_len=24, rtm_src_len=0, rtm_tos=0, rtm_table=RT_TABLE_MAIN, rtm_protocol=RTPROT_KERNEL, rtm_scope=RT_SCOPE_LINK, rtm_type=RTN_UNICAST, rtm_flags=0}, [[{nla_len=8, nla_type=RTA_TABLE}, RT_TABLE_MAIN], [{nla_len=8, nla_type=RTA_DST}, inet_addr("172.16.222.0")], [{nla_len=8, nla_type=RTA_PRIORITY}, 100], [{nla_len=8, nla_type=RTA_PREFSRC}, inet_addr("172.16.222.131")], [{nla_len=8, nla_type=RTA_OIF}, if_nametoindex("ens33")]]]], iov_len=280}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 136
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=NULL, iov_len=0}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=MSG_TRUNC}, MSG_PEEK|MSG_TRUNC) = 20
+12618 recvmsg(5, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=128 => 12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI|NLM_F_DUMP_FILTERED, nlmsg_seq=2872974679, nlmsg_pid=12618}, 0], iov_len=280}], msg_iovlen=1, msg_control=[{cmsg_len=20, cmsg_level=SOL_NETLINK, cmsg_type=0x3, cmsg_data="\x00\x00\x00\x00"}], msg_controllen=24, msg_flags=0}, MSG_TRUNC) = 20
+12618 write(1, "64 bytes from 172.16.222.1: icmp"..., 59) = 59
+12618 write(1, "\n", 1)                 = 1
+12618 write(1, "--- yangs-MacBook-Pro.local ping"..., 48) = 48
+12618 write(1, "1 packets transmitted, 1 receive"..., 61) = 61
+12618 write(1, "rtt min/avg/max/mdev = 2.265/2.2"..., 50) = 50
+12618 +++ exited with 0 +++
